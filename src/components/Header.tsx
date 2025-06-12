@@ -1,6 +1,5 @@
 
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 const Header = () => {
@@ -27,32 +26,28 @@ const Header = () => {
             />
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('who-we-are')}
-              className="font-arciform text-gray-700 hover:text-purple-secondary transition-colors"
-            >
-              Quem Somos
-            </button>
-            <button 
-              onClick={() => scrollToSection('professionals')}
-              className="font-arciform text-gray-700 hover:text-purple-secondary transition-colors"
-            >
-              Profissionais
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="font-arciform text-gray-700 hover:text-purple-secondary transition-colors"
-            >
-              Contato
-            </button>
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-green-accent hover:bg-green-accent/90 text-white font-arquitecta"
-            >
-              Agendar Consulta
-            </Button>
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden md:flex items-center justify-center flex-1">
+            <div className="flex items-center space-x-8">
+              <button 
+                onClick={() => scrollToSection('who-we-are')}
+                className="font-arciform text-gray-700 hover:text-purple-secondary transition-colors"
+              >
+                Quem Somos
+              </button>
+              <button 
+                onClick={() => scrollToSection('professionals')}
+                className="font-arciform text-gray-700 hover:text-purple-secondary transition-colors"
+              >
+                Profissionais
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="font-arciform text-gray-700 hover:text-purple-secondary transition-colors"
+              >
+                Contato
+              </button>
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -86,12 +81,6 @@ const Header = () => {
               >
                 Contato
               </button>
-              <Button 
-                onClick={() => scrollToSection('contact')}
-                className="bg-green-accent hover:bg-green-accent/90 text-white font-arquitecta w-full"
-              >
-                Agendar Consulta
-              </Button>
             </nav>
           </div>
         )}
